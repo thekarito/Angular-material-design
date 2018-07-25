@@ -1,0 +1,69 @@
+$fontSize-text: 0.9em;
+$fontColor-list: #595959;
+$color-detail: #2ba6cb;
+$background-hover: #dadada;
+$fontFamily-icon: "../fonts/material-icons.woff2";
+$fontFamily-iconText: 'Material Icons';
+
+@font-face {
+  font-family: $fontFamily-iconText;
+  font-style: normal;
+  font-weight: 400;
+  src: url($fontFamily-icon) format('woff2');
+}
+
+@mixin animationInfo ($class1, $class2){ //animate-if.ng-enter, .animate-if.ng-leave
+  .$class1, .$class2 {
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  }
+
+  .animate-if.ng-enter,
+  .animate-if.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+
+  .animate-if.ng-leave,
+  .animate-if.ng-enter.ng-enter-active {
+    opacity:1;
+  }
+}
+.material-icons {
+  font-family: $fontFamily-iconText;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  .libros-app {
+    text-align: left !important;
+    font-size: $fontSize-text;
+    color: $fontColor-list;
+    border-bottom: 1px dotted #dadada;
+    padding: 10px;
+
+    .itemLibros-app {
+      font-size: 1em;
+      color: $color-detail;
+      letter-spacing: 10px;
+    }
+
+    p:first-child {
+      font-weight: bold;
+    }
+
+    &:hover {
+      background: $background-hover;
+    }
+  }
+
+}
