@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Libros recomendados</title>
+    <title>Libros</title>
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css" />
     <link rel="stylesheet" href="src/css/index.css">
 </head>
@@ -30,7 +30,7 @@
             <md-grid-tile class="md-title">Titulo</md-grid-tile>
             <md-grid-tile class="md-title">Editorial</md-grid-tile>
             <md-grid-tile class="md-title">Autor</md-grid-tile>
-            <md-grid-tile class="md-title">EdiciÃ³n</md-grid-tile>
+            <md-grid-tile class="md-title">Edición</md-grid-tile>
         </md-grid-list>
 
         <md-grid-list md-cols-xs="2" md-cols-sm="5" md-cols-md="5" md-cols-gt-md="5" md-cols-gl="5" md-row-height="50px"  ng-repeat="libro in libreria | filter: filtername" class="libros-app">
@@ -82,7 +82,7 @@
                             <input required name="autorLibro" ng-model="nuevoLibro.autor" maxlength="50" string-directive>
                         </md-input-container>
                         <md-input-container flex>
-                            <label>EdiciÃ³n</label>
+                            <label>Edición</label>
                             <input required name="edicionLibro" ng-model="nuevoLibro.edicion" ng-maxlength="maxlength" ng-minlength="0"  maxlength="4" number-directive>
                             <code>{{formLibros.edicionLibro.$error}}</code><br>
                         </md-input-container>
