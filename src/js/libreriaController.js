@@ -30,7 +30,8 @@ app.controller('AppCtrl', function($scope, $mdDialog, $timeout) {
         $mdDialog.show(confirm).then(function() {
             $scope.libreria.splice(id,1);
             $scope.show = true;
-            $scope.mensajeDel = "Registro elimnado exitosamente...";
+            $scope.mensajeDel = "Registro eliminado exitosamente...";
+            $timeout(function(){ $scope.show = false; }, 3000);
         }, function() {
             $timeout(function(){ $scope.show = false; }, 3000);
            //
